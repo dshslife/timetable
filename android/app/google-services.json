@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "367965697286",
+    "project_id": "dshs-timetable",
+    "storage_bucket": "dshs-timetable.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367965697286:android:22e6decabc6ab3f82e1a87",
+        "android_client_info": {
+          "package_name": "com.timetable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367965697286-pue28b8b6a0c92kdg8qorlk1p5figc4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.timetable",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "367965697286-la481hh5nm7dfl2oumguop1bo40gphhn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJBpbUvOe8dPL6pkRPk0pWviWiGPnK4i4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367965697286-la481hh5nm7dfl2oumguop1bo40gphhn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
