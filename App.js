@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-import HomeScreen from './screens/HomeScreen';
+import CafeterriaScreen from './screens/CafeterriaScreen';
 import React from 'react';
 import {
   SafeAreaView,
@@ -26,7 +26,7 @@ import {
 
 const App: () => React$Node = () => {
   return (
-    <HomeScreen />
+    <CafeterriaScreen />
   );
 };
 
