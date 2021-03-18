@@ -6,7 +6,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import { Table, TableWrapper, Row, Col, Rows, Cell } from 'react-native-table-component';
 const HomeScreen = ({navigation}) => {
   const tableHead = ['','월','화','수','목','금']
-  const tableTitle = ['1교시','2교시','3교시','4교시','5교시','6교시','7교시']
+  const tableTitle = ['1','2','3','4','5','6','7']
   const tableDATA = [
   ['독서', '독서', '독서', '독서', '독서'],
   ['독서', '독서', '독서', '독서', '독서'],
@@ -17,19 +17,24 @@ const HomeScreen = ({navigation}) => {
   ['독서', '독서', '독서', '독서', '독서']]
 
   const element = (data, index) => (
-    <View>
-      <View style={css`width: 100%; height: 100px;`, {borderBottomWidth: 2, borderBottomColor: '#F0F0F0'}}>
-      <Text style={css`font-family: 'NanumSquareB'; font-size: 14px; color: #474747;`}>
+    <View style={css`background-color: #FFFFFF;`}>
+      <View style={css`width: 100%; height: 100px;`, {borderBottomWidth: 2, borderRightWidth: 2, borderRightColor: '#F8F8F8', borderBottomColor: '#F8F8F8'}}>
+      <Text style={css`font-weight: bold; height:40px; font-family: 'NanumSquareB'; font-size: 14px; color: #474747; margin-left: 10px; margin-top: 12px; margin-bottom:10px; font-weight: bold;`}>
         {data}
       </Text>
-    </View>
-    <View style={css`width: 100%; height: 50px;`}>
-      <Text style={css`font-family: 'NanumSquareB'; font-size: 14px; color: #2AB2D3;`}>
+      </View>
+
+    <View style={css`background-color: #FFFFFF;`}>
+      <View style={css`width: 100%; height: 50px;`,{borderRightWidth: 2, borderRightColor: '#F8F8F8'}}>
+      <Text style={css`font-weight: bold; height:38px; font-family: 'NanumSquareB'; font-size: 13px; color: #2AB2D3; margin-top: 7px; margin-left: 10px;`}>
         {data}
       </Text>
-    </View>
+      </View>
+      </View>
     </View>
   )
+
+
   return (
     <ScrollView
       style={css`
@@ -38,6 +43,7 @@ const HomeScreen = ({navigation}) => {
         width: 100%;
         height: 100%;
       `}>
+      <View style={css`background-color: #FFFFFF;`}>
       {/* 전체시간표 + 지도보기 버튼 */}
       <View>
         <View
@@ -55,12 +61,14 @@ const HomeScreen = ({navigation}) => {
                 margin-top: 21px;
                 font-family: 'NanumSquareEB';
                 background-color: #a8a8a8;
+                width: 90px;
               `}>
               <Text
                 style={css`
                   color: white;
+                  margin-left: 3px;
                 `}>
-                30929
+                30929 황성식
               </Text>
             </View>
 
@@ -80,11 +88,11 @@ const HomeScreen = ({navigation}) => {
                 color: #a8a8a8;
                 font-weight: bold;
                 margin-top: 11px;
-                margin-left: 22px;
+                margin-left: 23px;
                 margin-bottom: 15px;
                 font-family: 'NanumSquareEB';
               `}>
-              2021년 시발월 시발일
+              2021년 3월 18일
             </Text>
           </View>
 
@@ -113,24 +121,25 @@ const HomeScreen = ({navigation}) => {
           </View>
         </View>
       </View>
-      <Table borderStyle={{borderColor: 'transparent'}}>
-        <Row data={tableHead} style={{height: 40}} />
+      </View>
+      <Table style={{borderColor: 'transparent'}}>
+        <Row data={tableHead} style={{height: 27}} />
         {tableDATA.map((rowData, index) => (
           <TableWrapper key={index} style={{flexDirection: 'row'}}>
+            <View style={css`margin-left: 11px; margin-right: 10px; font-size: 20px;`}>
             <Cell
               key={index}
-              data={'1교시'}
-              style={css`
-                flex: 1;
-              `}
+              data={'1'}
+              style={css`margin-top: 9px;`}
             />
+            </View>
             {rowData.map((cellData, cellIndex) => (
               <Cell
                 key={cellIndex}
                 data={element(cellData, index)}
                 style={css`
                   flex: 1;
-                  height: 150px;
+                  height: 114px;
                 `}
               />
             ))}
